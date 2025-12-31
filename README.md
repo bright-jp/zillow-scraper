@@ -1,6 +1,6 @@
 # Zillow Scraper
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/web-scraper/zillow) 
+[![Promo](https://github.com/bright-jp/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/web-scraper/zillow) 
 
 このリポジトリでは、Zillowデータをスクレイピングするための2つの異なる方法を提供しています：
 1. 基本的なデータ収集向けの無料・小規模スクレイパー
@@ -111,7 +111,7 @@ Bright Dataの[Zillow Scraper API](https://brightdata.jp/products/web-scraper/zi
 ## 1. Zillow Property Details by URL
 物件URLを指定して、物件詳細を収集します。
 
-<img width="700" alt="zillow-properties-listing-information" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-information.png" />
+<img width="700" alt="zillow-properties-listing-information" src="https://github.com/bright-jp/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-information.png" />
 
 ### Input Parameters
 | Parameter | Required | Description            |
@@ -128,7 +128,7 @@ properties = [
 ]
 ```
 
-👉 Complete Python script: [zillow_properties.py](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_properties.py)
+👉 Complete Python script: [zillow_properties.py](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_properties.py)
 
 #### cURL Command:
 ```bash
@@ -172,12 +172,12 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
 }
 ```
 
-👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_properties.json)をご覧ください。
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_data/zillow_properties.json)をご覧ください。
 
 ## 2. Zillow Properties Listing by Filters
 ロケーションおよびその他の条件を使用して物件を検索します。
 
-<img width="700" alt="zillow-properties-listing-by-input" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-by-input.png" />
+<img width="700" alt="zillow-properties-listing-by-input" src="https://github.com/bright-jp/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-by-input.png" />
 
 💡 **Note:** 一部の物件には複数ユニットが含まれる場合があり、その結果、複数のレコードが生成されることがあります。結果を制限するには、[Limit per input](https://docs.brightdata.com/scraping-automation/web-scraper-api/overview#limit-records)を使用してください。
 
@@ -198,7 +198,7 @@ filters = [
     {"location": "Colorado", "listingCategory": "", "HomeType": ""},
 ]
 ```
-👉 Complete Python script: [zillow_discovered_properties.py](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_discovered_properties.py)
+👉 Complete Python script: [zillow_discovered_properties.py](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_discovered_properties.py)
 
 #### cURL Command:
 ```bash
@@ -256,12 +256,12 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
 }
 ```
 
-👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties.json)をご覧ください。
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties.json)をご覧ください。
 
 ## 3. Zillow Properties Listing by URL
 Zillowの検索ページURLを使用して、直接物件を検索します。
 
-<img width="700" alt="zillow-properties-listing-by-url" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-by-url.png" />
+<img width="700" alt="zillow-properties-listing-by-url" src="https://github.com/bright-jp/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-by-url.png" />
 
 
 💡 **Note:** 一部の物件には複数ユニットが含まれる場合があり、その結果、複数のレコードが生成されることがあります。結果を制限するには、[Limit per input](https://docs.brightdata.com/scraping-automation/web-scraper-api/overview#limit-records)を使用してください。
@@ -281,7 +281,7 @@ urls = [
     {"url": "https://www.zillow.com/sands-point-ny/rentals/?searchQueryState=%7B%22isMapVisible%22%3A..."},
 ]
 ```
-👉 Complete Python script: [zillow_discovered_properties_by_url.py](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_discovered_properties_by_url.py)
+👉 Complete Python script: [zillow_discovered_properties_by_url.py](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_discovered_properties_by_url.py)
 
 #### cURL Command:
 ```bash
@@ -322,12 +322,12 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
     "url": "https://www.zillow.com/homedetails/1937-Churchill-Dr-South-Bend-IN-46617/77029580_zpid/",
 }
 ```
-👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties_by_url.json)をご覧ください。
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties_by_url.json)をご覧ください。
 
 ## 4. Zillow Price History
 物件の価格履歴を収集します。
 
-<img width="700" alt="zillow-price-history" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-price-history.png" />
+<img width="700" alt="zillow-price-history" src="https://github.com/bright-jp/zillow-scraper/blob/main/zillow-images/zillow-price-history.png" />
 
 ### Input Parameters
 
@@ -344,7 +344,7 @@ urls = [
     {"url": "https://www.zillow.com/homedetails/930-3rd-St-SE-Hickory-NC-28602/71557289_zpid/"},
 ]
 ```
-👉 Complete Python script: [zillow_price_history.py](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_price_history.py)
+👉 Complete Python script: [zillow_price_history.py](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_scraper/zillow_price_history.py)
 
 #### cURL Command:
 ```bash
@@ -368,7 +368,7 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
     "timestamp": "2025-02-09T16:56:42.074Z",
 }
 ```
-👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_price_history.json)をご覧ください。
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/bright-jp/Zillow-Scraper/blob/main/zillow_api_data/zillow_price_history.json)をご覧ください。
 
 ## No-Code Scraper Option
 Bright Data **No-Code Scraper** は、プログラミングなしでZillowデータを収集できる、ユーザーフレンドリーな方法を提供します。
@@ -376,7 +376,7 @@ Bright Data **No-Code Scraper** は、プログラミングなしでZillowデー
 - データ収集プロセス全体を自動化できます。
 - 複数の形式で結果を直接ダウンロードできます。
 
-詳細な手順については、[Getting Started guide](https://github.com/luminati-io/Zillow-Scraper/blob/main/no-code-scraper.md)をご覧ください。
+詳細な手順については、[Getting Started guide](https://github.com/bright-jp/Zillow-Scraper/blob/main/no-code-scraper.md)をご覧ください。
 
 ## Additional Options
 以下のパラメータでデータ収集を微調整できます：
