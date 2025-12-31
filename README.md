@@ -1,10 +1,10 @@
 # Zillow Scraper
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.com/products/web-scraper/zillow) 
+[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/web-scraper/zillow) 
 
-This repository provides two distinct methods for scraping Zillow data:
-1. A free, small-scale scraper for basic data collection
-2. An enterprise-grade API solution for large-scale data extraction
+このリポジトリでは、Zillowデータをスクレイピングするための2つの異なる方法を提供しています：
+1. 基本的なデータ収集向けの無料・小規模スクレイパー
+2. 大規模データ抽出向けのエンタープライズグレードAPIソリューション
 
 ## Table of Contents
 - [Free Zillow Data Scraper](#free-zillow-data-scraper)
@@ -21,16 +21,16 @@ This repository provides two distinct methods for scraping Zillow data:
 - [Support & Resources](#support--resources)
 
 ## Free Zillow Data Scraper
-The free scraper allows you to collect property data from Zillow search pages on a small scale.
+無料スクレイパーでは、Zillowの検索ページから小規模に物件データを収集できます。
 
 ### Input Requirements
 | Parameter | Required | Description |
 |-----------|----------|-------------|
-| coords    | Yes      | Boundary coordinates [west, east, south, north] |
-| pages     | Yes      | Number of pages to scrape |
+| coords    | Yes      | 境界座標 [west, east, south, north] |
+| pages     | Yes      | スクレイピングするページ数 |
 
 ### Implementation
-To use the scraper, modify the coordinates and page count in the following code according to your location and data requirements:
+スクレイパーを使用するには、以下のコード内の座標とページ数を、お住まいの場所およびデータ要件に合わせて変更してください：
 ```python
 # free_zillow_scraper/property_data.py
 def get_search_params():
@@ -43,7 +43,7 @@ def get_search_params():
     )
 ```
 
-**Hint:** Geographical coordinates can be found in the `<script>` tag of Zillow's search page for any location. Look for the following tag:
+**ヒント：** 地理座標は、任意の場所のZillow検索ページ内にある`<script>`タグから取得できます。次のタグを探してください：
 ```bash
 <script id="__NEXT_DATA__" type="application/json">
 ```
@@ -78,45 +78,45 @@ def get_search_params():
 ```
 
 ## Limitations of Free Scraper
-The free Zillow scraper works well for small-scale data extraction but has the following limitations:
+無料のZillowスクレイパーは小規模なデータ抽出には有効ですが、以下の制限があります：
 
-- **Rate Limiting:** Zillow blocks requests after a few scrapes.
-- **IP Blocking:** Frequent scraping from the same IP can lead to bans.
-- **Limited Scalability:** Not suitable for high-volume data collection.
-- **Captcha:** Zillow may present CAPTCHAs to block automated requests.
-- **Honeypots:** Zillow uses honeypot traps to detect and block bots.
+- **Rate Limiting:** Zillowは数回スクレイピングした後にリクエストをブロックします。
+- **IP Blocking:** 同一IPアドレスから頻繁にスクレイピングすると、BANされる可能性があります。
+- **Limited Scalability:** 大量のデータ収集には不向きです。
+- **Captcha:** Zillowは自動化されたリクエストをブロックするためにCAPTCHAを表示する場合があります。
+- **Honeypots:** Zillowはボットを検出してブロックするために、ホニーポットのトラップを使用しています。
 
-For large-scale scraping, consider using the **Zillow Scraper API** described below.
+大規模なスクレイピングには、以下で説明する **Zillow Scraper API** の利用をご検討ください。
 
 ##  Zillow Scraper API
-The Bright Data [Zillow Scraper API](https://brightdata.com/products/web-scraper/zillow) provides a scalable, reliable, and hassle-free solution for extracting large-scale Zillow data without the need to build or maintain your own infrastructure.
+Bright Dataの[Zillow Scraper API](https://brightdata.jp/products/web-scraper/zillow)は、自前のインフラを構築または保守することなく、大規模なZillowデータをスケーラブルかつ信頼性高く、手間なく抽出できるソリューションです。
 
 ### Key Features
-- **Scalable & Reliable:** Optimized for high-volume and real-time data collection.
-- **Anti-Blocking:** Built-in proxy rotation and CAPTCHA solving.
-- **Legal Compliance:** Fully GDPR and CCPA compliant.
-- **Global Coverage:** Access data from any region or language.
-- **Real-Time Data:** Fresh data with minimal latency.
-- **Advanced Filtering:** Customize data extraction with precise filters.
-- **Pay-as-You-Go:** Only pay for successful responses.
-- **Free Trial:** Includes 20 free API calls to get started.
-- **Dedicated Support:** 24/7 technical assistance.
-- **No-Code Option:** Scrape Zillow data via API or no-code scrapers.
+- **Scalable & Reliable:** 大量かつリアルタイムのデータ収集に最適化されています。
+- **Anti-Blocking:** プロキシローテーションとCAPTCHA解決を内蔵しています。
+- **Legal Compliance:** GDPRおよびCCPAに完全準拠しています。
+- **Global Coverage:** あらゆる地域や言語からデータにアクセスできます。
+- **Real-Time Data:** 最小限の遅延で最新データを取得できます。
+- **Advanced Filtering:** 精密なフィルターでデータ抽出をカスタマイズできます。
+- **Pay-as-You-Go:** 成功したレスポンスに対してのみ課金されます。
+- **Free Trial:** 開始用にAPIコール20回分が無料で含まれます。
+- **Dedicated Support:** 24時間365日の技術支援を提供します。
+- **No-Code Option:** APIまたはノーコードスクレイパーでZillowデータをスクレイピングできます。
 
 ### Quick Start Guide
-- **Sign Up:** Create a [Bright Data account](https://brightdata.com/).
-- **Get API Token:** Obtain your [API key](https://docs.brightdata.com/general/account/api-token) from the dashboard.
-- **Choose Endpoint:** Select from the available API endpoints below.
+- **Sign Up:** [Bright Data account](https://brightdata.jp/)を作成してください。
+- **Get API Token:** ダッシュボードから[API key](https://docs.brightdata.com/general/account/api-token)を取得してください。
+- **Choose Endpoint:** 以下の利用可能なAPIエンドポイントから選択してください。
 
 ## 1. Zillow Property Details by URL
-Collect property details by providing the property URL.
+物件URLを指定して、物件詳細を収集します。
 
 <img width="700" alt="zillow-properties-listing-information" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-information.png" />
 
 ### Input Parameters
 | Parameter | Required | Description            |
 |-----------|----------|------------------------|
-| `url`       | Yes      | Zillow property URL   |
+| `url`       | Yes      | Zillow物件URL   |
 
 
 ### Example Request
@@ -172,21 +172,21 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
 }
 ```
 
-👉 This is a partial response. See the [full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_properties.json) for complete property details.
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_properties.json)をご覧ください。
 
 ## 2. Zillow Properties Listing by Filters
-Search properties using location and other criteria.
+ロケーションおよびその他の条件を使用して物件を検索します。
 
 <img width="700" alt="zillow-properties-listing-by-input" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-by-input.png" />
 
-💡 **Note:** Some properties may have multiple units, which can result in several records. To limit results, use the [Limit per input](https://docs.brightdata.com/scraping-automation/web-scraper-api/overview#limit-records).
+💡 **Note:** 一部の物件には複数ユニットが含まれる場合があり、その結果、複数のレコードが生成されることがあります。結果を制限するには、[Limit per input](https://docs.brightdata.com/scraping-automation/web-scraper-api/overview#limit-records)を使用してください。
 
 ### Input Parameters
 | Parameter       | Required | Description                                          |
 |---------------|----------|------------------------------------------------------|
-| `location`      | Yes      | Can be a zip code, city, or state.                   |
-| `listingCategory` | Yes    | Options: Sold, House for rent, House for sale.       |
-| `HomeType`      | Yes      | Home type from Zillow (e.g., Houses, Apartments, Townhomes). |
+| `location`      | Yes      | 郵便番号、都市、または州を指定できます。                   |
+| `listingCategory` | Yes    | オプション：Sold、House for rent、House for sale。       |
+| `HomeType`      | Yes      | ZillowのHome type（例：Houses、Apartments、Townhomes）。 |
 
 
 ### Example Request
@@ -256,21 +256,21 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
 }
 ```
 
-👉 This is a partial response. See the [full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties.json) for complete property details.
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties.json)をご覧ください。
 
 ## 3. Zillow Properties Listing by URL
-Search for properties directly using Zillow search page URLs.
+Zillowの検索ページURLを使用して、直接物件を検索します。
 
 <img width="700" alt="zillow-properties-listing-by-url" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-properties-listing-by-url.png" />
 
 
-💡 **Note:** Some properties may have multiple units, which can result in several records. To limit results, use the [Limit per input](https://docs.brightdata.com/scraping-automation/web-scraper-api/overview#limit-records).
+💡 **Note:** 一部の物件には複数ユニットが含まれる場合があり、その結果、複数のレコードが生成されることがあります。結果を制限するには、[Limit per input](https://docs.brightdata.com/scraping-automation/web-scraper-api/overview#limit-records)を使用してください。
 
 
 ### Input Parameters:
 | Parameter | Required | Description                          |
 |-----------|----------|--------------------------------------|
-| `url`       | Yes      | Direct Zillow search URL with complete search parameters |
+| `url`       | Yes      | 完全な検索パラメータを含む、直接のZillow検索URL |
 
 ### Example Request
 #### Python Code:
@@ -322,10 +322,10 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
     "url": "https://www.zillow.com/homedetails/1937-Churchill-Dr-South-Bend-IN-46617/77029580_zpid/",
 }
 ```
-👉 This is a partial response. See the [full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties_by_url.json) for complete property details.
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_discovered_properties_by_url.json)をご覧ください。
 
 ## 4. Zillow Price History
-Collect pricing history for a property.
+物件の価格履歴を収集します。
 
 <img width="700" alt="zillow-price-history" src="https://github.com/luminati-io/zillow-scraper/blob/main/zillow-images/zillow-price-history.png" />
 
@@ -333,7 +333,7 @@ Collect pricing history for a property.
 
 | Parameter | Required | Description            |
 |-----------|----------|------------------------|
-| `url`       | Yes      | Zillow property URL.   |
+| `url`       | Yes      | Zillow物件URL。   |
 
 ### Example Request
 #### Python Code:
@@ -368,29 +368,29 @@ curl -H "Authorization: Bearer YOUR_API_TOKEN" \
     "timestamp": "2025-02-09T16:56:42.074Z",
 }
 ```
-👉 This is a partial response. See the [full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_price_history.json) for complete property details.
+👉 これは部分的なレスポンスです。物件の完全な詳細については、[full JSON response](https://github.com/luminati-io/Zillow-Scraper/blob/main/zillow_api_data/zillow_price_history.json)をご覧ください。
 
 ## No-Code Scraper Option
-Bright Data **No-Code Scraper** offers a user-friendly way to collect Zillow data without programming.
-- Configure scrapers in minutes.
-- Automate the entire data collection process.
-- Download results directly in multiple formats.
+Bright Data **No-Code Scraper** は、プログラミングなしでZillowデータを収集できる、ユーザーフレンドリーな方法を提供します。
+- 数分でスクレイパーを設定できます。
+- データ収集プロセス全体を自動化できます。
+- 複数の形式で結果を直接ダウンロードできます。
 
-For detailed instructions, visit our [Getting Started guide](https://github.com/luminati-io/Zillow-Scraper/blob/main/no-code-scraper.md).
+詳細な手順については、[Getting Started guide](https://github.com/luminati-io/Zillow-Scraper/blob/main/no-code-scraper.md)をご覧ください。
 
 ## Additional Options
-Fine-tune your data collection with these parameters:
+以下のパラメータでデータ収集を微調整できます：
 
 | **Parameter**       | **Type**   | **Description**                                            | **Example**                  |
 |---------------------|------------|------------------------------------------------------------|------------------------------|
-| `limit`             | `integer`  | Max results per input                                   | `limit=10`                   |
-| `include_errors`    | `boolean`  | Get error reports for troubleshooting                     | `include_errors=true`        |
-| `notify`            | `url`      | Webhook notification URL to be notified upon completion  | `notify=https://notify-me.com/` |
-| `format`            | `enum`     | Output format (e.g., JSON, NDJSON, JSONL, CSV)         | `format=json`                |
+| `limit`             | `integer`  | 入力ごとの最大結果数                                   | `limit=10`                   |
+| `include_errors`    | `boolean`  | トラブルシューティング用のエラーレポートを取得                     | `include_errors=true`        |
+| `notify`            | `url`      | 完了時に通知を受け取るためのWebhook通知URL  | `notify=https://notify-me.com/` |
+| `format`            | `enum`     | 出力形式（例：JSON、NDJSON、JSONL、CSV）         | `format=json`                |
 
-💡 **Pro Tip:** You can deliver data to an [external storage](https://docs.brightdata.com/scraping-automation/web-data-apis/web-scraper-api/overview#via-deliver-to-external-storage) or a [webhook](https://docs.brightdata.com/scraping-automation/web-data-apis/web-scraper-api/overview#via-webhook).
+💡 **Pro Tip:** データは[external storage](https://docs.brightdata.com/scraping-automation/web-data-apis/web-scraper-api/overview#via-deliver-to-external-storage)または[webhook](https://docs.brightdata.com/scraping-automation/web-data-apis/web-scraper-api/overview#via-webhook)へ配信できます。
 
 ## Support & Resources
 - **API Documentation:** [Bright Data Docs](https://docs.brightdata.com/scraping-automation/web-scraper-api/trigger-a-collection)
-- **Scraping Best Practices:** [Avoid Getting Blocked](https://brightdata.com/blog/web-data/web-scraping-without-getting-blocked)
+- **Scraping Best Practices:** [Avoid Getting Blocked](https://brightdata.jp/blog/web-data/web-scraping-without-getting-blocked)
 - **Technical Support:** [Contact Us](mailto:support@brightdata.com)
